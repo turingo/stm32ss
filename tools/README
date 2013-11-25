@@ -1,8 +1,16 @@
 STM32F10x_StdPeriph_Lib_V3.5.0
+固件开发库
 http://www.st.com/st-web-ui/static/active/en/st_prod_software_internet/resource/technical/software/firmware/stsw-stm32054.zip
 
 CH341
+USB转串口驱动
 http://wch-ic.com/download/Default.asp?classid=6
 
 AccessPort137
+串口调试工具
 http://www.sudt.com/download/AccessPort137.zip
+
+FlyMcu
+在线编程工具
+http://www.mcuisp.com/software/FlyMcu.rar
+已经配置好综合实验，直接编程即可刷新板子
