@@ -3,7 +3,8 @@
 /*! C entry !*/
 int main(void)
 {
-    marquee();
+    //marquee();
+    two_tigers();
 
     return 0;
 }

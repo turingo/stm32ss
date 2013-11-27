@@ -136,7 +136,7 @@
             <RestoreToolbox>1</RestoreToolbox>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>1</TargetSelection>
+          <TargetSelection>7</TargetSelection>
           <SimDlls>
             <CpuDll></CpuDll>
             <CpuDllArguments></CpuDllArguments>
@@ -150,7 +150,7 @@
             <PeripheralDll></PeripheralDll>
             <PeripheralDllArguments></PeripheralDllArguments>
             <InitializationFile></InitializationFile>
-            <Driver>BIN\UL2CM3.DLL</Driver>
+            <Driver>Segger\JL2CM3.dll</Driver>
           </TargetDlls>
         </DebugOption>
         <Utilities>
@@ -160,9 +160,9 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>4096</DriverSelection>
+            <DriverSelection>4099</DriverSelection>
           </Flash1>
-          <Flash2>BIN\UL2CM3.DLL</Flash2>
+          <Flash2>Segger\JL2CM3.dll</Flash2>
           <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
         </Utilities>
@@ -701,6 +701,16 @@
               <FileType>5</FileType>
               <FilePath>.\bsp\leds.h</FilePath>
             </File>
+            <File>
+              <FileName>bz.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\bsp\bz.c</FilePath>
+            </File>
+            <File>
+              <FileName>bz.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bsp\bz.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -715,6 +725,11 @@
               <FileName>marquee.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\demos\marquee.c</FilePath>
+            </File>
+            <File>
+              <FileName>two_tigers.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\demos\two_tigers.c</FilePath>
             </File>
           </Files>
         </Group>
