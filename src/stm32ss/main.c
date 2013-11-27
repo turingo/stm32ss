@@ -4,7 +4,8 @@
 int main(void)
 {
     //marquee();
-    two_tigers();
+    //two_tigers();
+    kb_test();
 
     return 0;
 }
