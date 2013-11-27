@@ -711,6 +711,26 @@
               <FileType>5</FileType>
               <FilePath>.\bsp\bz.h</FilePath>
             </File>
+            <File>
+              <FileName>kb.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\bsp\kb.c</FilePath>
+            </File>
+            <File>
+              <FileName>kb.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bsp\kb.h</FilePath>
+            </File>
+            <File>
+              <FileName>bcq.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\bsp\bcq.c</FilePath>
+            </File>
+            <File>
+              <FileName>bcq.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bsp\bcq.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -730,6 +750,11 @@
               <FileName>two_tigers.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\demos\two_tigers.c</FilePath>
+            </File>
+            <File>
+              <FileName>kb_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\demos\kb_test.c</FilePath>
             </File>
           </Files>
         </Group>
