@@ -22,6 +22,12 @@ int bcq_full(const bcq_t* this)
     return this->count == this->size;
 }
 
+/*! Get the Queue element count !*/
+int bcq_count(const bcq_t* this)
+{
+    return this->count;
+}
+
 /*! Push a element to the Queue !*/
 void bcq_push(bcq_t* this, uint8_t elem)
 {

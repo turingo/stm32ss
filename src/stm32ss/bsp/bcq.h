@@ -17,6 +17,7 @@ typedef struct
 void bcq_init(bcq_t* this, uint8_t* elems, int size);
 int bcq_empty(const bcq_t* this);
 int bcq_full(const bcq_t* this);
+int bcq_count(const bcq_t* this);
 void bcq_push(bcq_t* this, uint8_t elem);
 uint8_t bcq_pop(bcq_t* this);
 

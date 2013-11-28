@@ -4,5 +4,6 @@
 void marquee(void);
 void two_tigers(void);
 void kb_test(void);
+void sp_test(void);
 
 #endif

@@ -731,6 +731,16 @@
               <FileType>5</FileType>
               <FilePath>.\bsp\bcq.h</FilePath>
             </File>
+            <File>
+              <FileName>sp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\bsp\sp.c</FilePath>
+            </File>
+            <File>
+              <FileName>sp.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bsp\sp.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -755,6 +765,11 @@
               <FileName>kb_test.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\demos\kb_test.c</FilePath>
+            </File>
+            <File>
+              <FileName>sp_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\demos\sp_test.c</FilePath>
             </File>
           </Files>
         </Group>
