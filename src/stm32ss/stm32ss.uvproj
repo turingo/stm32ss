@@ -741,6 +741,16 @@
               <FileType>5</FileType>
               <FilePath>.\bsp\sp.h</FilePath>
             </File>
+            <File>
+              <FileName>e2r.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\bsp\e2r.c</FilePath>
+            </File>
+            <File>
+              <FileName>e2r.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bsp\e2r.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -770,6 +780,11 @@
               <FileName>sp_test.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\demos\sp_test.c</FilePath>
+            </File>
+            <File>
+              <FileName>e2r_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\demos\e2r_test.c</FilePath>
             </File>
           </Files>
         </Group>

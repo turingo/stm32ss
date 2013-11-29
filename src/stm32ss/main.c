@@ -4,11 +4,12 @@
 /*! C entry !*/
 int main(void)
 {
-    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+    //NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
     //marquee();
     //two_tigers();
     //kb_test();
-    sp_test();
+    //sp_test();
+    e2r_test();
 
     return 0;
 }
