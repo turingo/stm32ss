@@ -1,0 +1,8 @@
+【2013年11月29日】
+ ×ULINK2和JLINKV8只能下载不能调试的问题，终于找到了原因，应该是用USB供电会有驱动不足的隐患，改为用直流电源供电就可以正常调试了。
+ ×串口第一个字节发送不出去的原因在于芯片复位后，TC和TXE标志位默认都是1，所以应该用以下的写法：
+    void sp_putc(char ch)
+    {
+        while(USART_GetFlagStatus(USART2,USART_FLAG_TC) != SET); 
+        USART_SendData(USART2, ch);
+    }

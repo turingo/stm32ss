@@ -12,18 +12,19 @@ void sp_init(void)
     NVIC_InitTypeDef nvic;
 	USART_InitTypeDef uart;
 	 
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1 | RCC_APB2Periph_GPIOA, ENABLE);
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
 
-    gpio.GPIO_Pin = GPIO_Pin_9;
+    gpio.GPIO_Pin = GPIO_Pin_2;
     gpio.GPIO_Speed = GPIO_Speed_50MHz;
     gpio.GPIO_Mode = GPIO_Mode_AF_PP;
     GPIO_Init(GPIOA, &gpio);
    
-    gpio.GPIO_Pin = GPIO_Pin_10;
+    gpio.GPIO_Pin = GPIO_Pin_3;
     gpio.GPIO_Mode = GPIO_Mode_IN_FLOATING;
     GPIO_Init(GPIOA, &gpio);  
 
-    nvic.NVIC_IRQChannel = USART1_IRQn;
+    nvic.NVIC_IRQChannel = USART2_IRQn;
     nvic.NVIC_IRQChannelPreemptionPriority = 3;
     nvic.NVIC_IRQChannelSubPriority = 3;
     nvic.NVIC_IRQChannelCmd = ENABLE;
@@ -35,9 +36,9 @@ void sp_init(void)
     uart.USART_Parity = USART_Parity_No;
     uart.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
     uart.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
-    USART_Init(USART1, &uart);
-    USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
-    USART_Cmd(USART1, ENABLE);
+    USART_Init(USART2, &uart);
+    USART_ITConfig(USART2, USART_IT_RXNE, ENABLE);
+    USART_Cmd(USART2, ENABLE);
 
     bcq_init(&rbq, rbuf, RBUF_SIZE);
 }
@@ -70,8 +71,8 @@ char sp_getc(void)
 /*! Put a character to the Serial Port !*/
 void sp_putc(char ch)
 {
-    USART_SendData(USART1, ch);
-    while(USART_GetFlagStatus(USART1,USART_FLAG_TC) != SET); 
+	while(USART_GetFlagStatus(USART2,USART_FLAG_TC) != SET); 
+    USART_SendData(USART2, ch);
 }
 
 /*! Put a string to the Serial Port !*/
@@ -79,8 +80,8 @@ void sp_puts(const char* str)
 {
     while(*str)
     {
-        USART_SendData(USART1, *str++); 
-        while(USART_GetFlagStatus(USART1,USART_FLAG_TC) != SET);
+		while(USART_GetFlagStatus(USART2, USART_FLAG_TC) != SET);
+        USART_SendData(USART2, *str++); 
     }
 }
 
@@ -98,14 +99,14 @@ void sp_write(const uint8_t* datas, int len)
     int i;
     for(i = 0; i < len; i++)
     {
-        USART_SendData(USART1, datas[i]); 
-        while(USART_GetFlagStatus(USART1,USART_FLAG_TC) != SET);
+        USART_SendData(USART2, datas[i]); 
+        while(USART_GetFlagStatus(USART2,USART_FLAG_TC) != SET);
     }
 }
 
 /*! USART1 interrupt service routine !*/
-void USART1_IRQHandler(void)
+void USART2_IRQHandler(void)
 {
-    if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)
-        bcq_push(&rbq, USART_ReceiveData(USART1));
+    if(USART_GetITStatus(USART2, USART_IT_RXNE) != RESET)
+        bcq_push(&rbq, USART_ReceiveData(USART2));
 }

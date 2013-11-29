@@ -66,7 +66,7 @@ void e2r_read(int addr, uint8_t* datas, int len)
     I2C_GenerateSTART(I2C2, ENABLE);
     while(!I2C_CheckEvent(I2C2, I2C_EVENT_MASTER_MODE_SELECT)){};
     I2C_Send7bitAddress(I2C2, EEPROM_ADDR, I2C_Direction_Transmitter);
-    while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)){};
+    while(!I2C_CheckEvent(I2C2, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)){};
     I2C_SendData(I2C2, addr);  
     while(!I2C_CheckEvent(I2C2, I2C_EVENT_MASTER_BYTE_TRANSMITTED)){};
     I2C_GenerateSTART(I2C2, ENABLE);

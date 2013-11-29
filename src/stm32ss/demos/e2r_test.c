@@ -20,6 +20,7 @@ void e2r_test(void)
 
     for(;;)
     {
+		kb_scan();
         kd = kb_get(KB_DOWN);
 
         if(kd & KEY_0)
