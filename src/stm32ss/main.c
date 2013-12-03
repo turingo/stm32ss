@@ -9,7 +9,8 @@ int main(void)
     //two_tigers();
     //kb_test();
     //sp_test();
-    e2r_test();
+    //e2r_test();
+    sf_test();
 
     return 0;
 }

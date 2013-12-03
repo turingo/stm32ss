@@ -136,7 +136,7 @@
             <RestoreToolbox>1</RestoreToolbox>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>1</TargetSelection>
+          <TargetSelection>7</TargetSelection>
           <SimDlls>
             <CpuDll></CpuDll>
             <CpuDllArguments></CpuDllArguments>
@@ -150,7 +150,7 @@
             <PeripheralDll></PeripheralDll>
             <PeripheralDllArguments></PeripheralDllArguments>
             <InitializationFile></InitializationFile>
-            <Driver>BIN\UL2CM3.DLL</Driver>
+            <Driver>Segger\JL2CM3.dll</Driver>
           </TargetDlls>
         </DebugOption>
         <Utilities>
@@ -751,6 +751,16 @@
               <FileType>5</FileType>
               <FilePath>.\bsp\e2r.h</FilePath>
             </File>
+            <File>
+              <FileName>sf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\bsp\sf.c</FilePath>
+            </File>
+            <File>
+              <FileName>sf.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bsp\sf.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -785,6 +795,11 @@
               <FileName>e2r_test.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\demos\e2r_test.c</FilePath>
+            </File>
+            <File>
+              <FileName>sf_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\demos\sf_test.c</FilePath>
             </File>
           </Files>
         </Group>
